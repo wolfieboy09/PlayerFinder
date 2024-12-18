@@ -13,6 +13,8 @@ import net.minecraft.text.Texts;
 import net.minecraft.util.Formatting;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class FindPlayerCommand {
     public FindPlayerCommand(){}
 
@@ -28,7 +30,7 @@ public class FindPlayerCommand {
                             // Took this line from LocateCommand from Minecraft
                             // It's what I needed, and it works well
                             final Text teleportTo = Texts.bracketed(Text.translatable("chat.coordinates", playerX, playerY, playerZ)).styled((style) -> style.withColor(Formatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/tp @s " + playerX + " " + playerY + " " + playerZ)).withHoverEvent(new HoverEvent(net.minecraft.text.HoverEvent.Action.SHOW_TEXT, Text.translatable("chat.coordinates.tooltip"))));
-                            context.getSource().sendFeedback(() -> Text.literal("%s is at %s".formatted(player.getDisplayName(), teleportTo)),  false);
+                            context.getSource().sendFeedback(() -> Objects.requireNonNull(player.getDisplayName()).copy().append(Text.literal(" is at ")).append(teleportTo), false);
                             return 1;
                         })));
 
