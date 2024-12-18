@@ -80,5 +80,5 @@ subprojects {
 
 forgix {
     group = maven_group
-    mergedJarName = "playerlocator-${mod_version}.jar"
+    mergedJarName = "${archives_name}-${mod_version}.jar"
 }

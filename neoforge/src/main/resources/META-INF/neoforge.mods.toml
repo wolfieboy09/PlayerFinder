@@ -1,10 +1,10 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-issueTrackerURL = "https://github.com/wolfieboy09/PlayerLocator/issues"
+issueTrackerURL = "https://github.com/wolfieboy09/PlayerFinder/issues"
 license = "MIT"
 
 [[mods]]
-modId = "playerlocator"
+modId = "modernplayerfinder"
 version = "${version}"
 displayName = "Player Locator"
 authors = "Wolfieboy09"
@@ -13,21 +13,21 @@ This mod allows server admins to locate players on the server
 '''
 logoFile = "icon.png"
 
-[[dependencies.playerlocator]]
+[[dependencies.modernplayerfinder]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21.1,)"
 ordering = "NONE"
 side = "SERVER"
 
-[[dependencies.playerlocator]]
+[[dependencies.modernplayerfinder]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "SERVER"
 
-[[dependencies.playerlocator]]
+[[dependencies.modernplayerfinder]]
 modId = "architectury"
 type = "required"
 versionRange = "[13.0.8,)"

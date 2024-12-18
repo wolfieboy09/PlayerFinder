@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "playerlocator",
+  "id": "modernplayerfinder",
   "version": "${version}",
   "name": "Player Locator",
   "description": "This mod allows server admins to locate players on the server\n",
@@ -8,16 +8,16 @@
     "Wolfieboy09"
   ],
   "contact": {
-    "homepage": "https://github.com/wolfieboy09/PlayerLocator",
-    "sources": "https://github.com/wolfieboy09/PlayerLocator",
-    "issues": "https://github.com/wolfieboy09/PlayerLocator/issues"
+    "homepage": "https://github.com/wolfieboy09/PlayerFinder",
+    "sources": "https://github.com/wolfieboy09/PlayerFinder",
+    "issues": "https://github.com/wolfieboy09/PlayerFinder/issues"
   },
   "license": "MIT",
   "icon": "icon.png",
   "environment": "server",
   "entrypoints": {
     "main": [
-      "dev.wolfieboy09.playerlocator.fabric.PlayerLocatorFabric"
+      "dev.wolfieboy09.modernplayerfinder.fabric.ModernPlayerFinderFabric"
     ]
   },
   "mixins": [],
@@ -28,7 +28,5 @@
     "architectury": ">=13.0.8",
     "fabric-api": "*"
   },
-  "suggests": {
-
-  }
+  "suggests": {}
 }

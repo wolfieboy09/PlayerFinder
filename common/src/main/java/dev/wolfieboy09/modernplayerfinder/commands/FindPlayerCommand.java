@@ -1,4 +1,4 @@
-package dev.wolfieboy09.playerlocator.commands;
+package dev.wolfieboy09.modernplayerfinder.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.tree.LiteralCommandNode;

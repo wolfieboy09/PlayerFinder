@@ -1,4 +1,4 @@
-package dev.wolfieboy09.playerlocator;
+package dev.wolfieboy09.modernplayerfinder;
 
 public enum Platform {
     NEOFORGE("NEOFORGE"),
