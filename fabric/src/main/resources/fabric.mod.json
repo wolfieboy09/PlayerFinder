@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "icon": "icon.png",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "dev.wolfieboy09.modernplayerfinder.fabric.ModernPlayerFinderFabric"
