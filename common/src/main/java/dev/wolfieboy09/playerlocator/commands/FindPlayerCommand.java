@@ -28,7 +28,7 @@ public class FindPlayerCommand {
                             // Took this line from LocateCommand from Minecraft
                             // It's what I needed, and it works well
                             final Text teleportTo = Texts.bracketed(Text.translatable("chat.coordinates", playerX, playerY, playerZ)).styled((style) -> style.withColor(Formatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/tp @s " + playerX + " " + playerY + " " + playerZ)).withHoverEvent(new HoverEvent(net.minecraft.text.HoverEvent.Action.SHOW_TEXT, Text.translatable("chat.coordinates.tooltip"))));
-                            context.getSource().sendFeedback(() -> Text.translatable("commands.findplayer.location", player.getDisplayName(), teleportTo),  false);
+                            context.getSource().sendFeedback(() -> Text.literal("%s is at %s".formatted(player.getDisplayName(), teleportTo)),  false);
                             return 1;
                         })));
 
