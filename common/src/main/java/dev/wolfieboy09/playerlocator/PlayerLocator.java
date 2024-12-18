@@ -10,6 +10,6 @@ public final class PlayerLocator {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static void init(@NotNull Platform platform) {
-        LOGGER.info("Launching on {}", platform);
+        LOGGER.info("[PlayerLocator] Launching on {}", platform);
     }
 }
