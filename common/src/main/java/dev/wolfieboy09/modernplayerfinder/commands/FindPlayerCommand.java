@@ -27,10 +27,16 @@ public class FindPlayerCommand {
                             final int playerY = player.getBlockY();
                             final int playerZ = player.getBlockZ();
 
-                            // Took this line from LocateCommand from Minecraft
-                            // It's what I needed, and it works well
-                            final Text teleportTo = Texts.bracketed(Text.translatable("chat.coordinates", playerX, playerY, playerZ)).styled((style) -> style.withColor(Formatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/tp @s " + playerX + " " + playerY + " " + playerZ)).withHoverEvent(new HoverEvent(net.minecraft.text.HoverEvent.Action.SHOW_TEXT, Text.translatable("chat.coordinates.tooltip"))));
-                            context.getSource().sendFeedback(() -> Objects.requireNonNull(player.getDisplayName()).copy().append(Text.literal(" is at ")).append(teleportTo), false);
+                            final String dimension = player.getWorld().getRegistryKey().getValue().toString();
+                            final Text teleportTo = Texts.bracketed(Text.translatable("chat.coordinates", playerX, playerY, playerZ)).styled((style) -> style.withColor(Formatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/execute in " + dimension + " run tp @s " + playerX + " " + playerY + " " + playerZ)).withHoverEvent(new HoverEvent(net.minecraft.text.HoverEvent.Action.SHOW_TEXT, Text.translatable("chat.coordinates.tooltip"))));
+                            context.getSource().sendFeedback(() ->
+                                            Objects.requireNonNull(player.getDisplayName()).copy()
+                                                    .append(Text.literal(" is at "))
+                                                    .append(teleportTo).append(" in dimension ")
+                                                    .append(
+                                                            Texts.bracketed(Text.literal(dimension.split(":")[1]))
+                                                    ),
+                                    false);
                             return 1;
                         })));
 
