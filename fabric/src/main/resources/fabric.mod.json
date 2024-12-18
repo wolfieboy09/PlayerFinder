@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "playerlocator",
+  "version": "${version}",
+  "name": "Player Locator",
+  "description": "This mod allows server admins to locate players on the server\n",
+  "authors": [
+    "Wolfieboy09"
+  ],
+  "contact": {
+    "homepage": "https://github.com/wolfieboy09/PlayerLocator",
+    "sources": "https://github.com/wolfieboy09/PlayerLocator",
+    "issues": "https://github.com/wolfieboy09/PlayerLocator/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "dev.wolfieboy09.playerlocator.fabric.PlayerLocatorFabric"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": "*"
+  },
+  "suggests": {
+
+  }
+}
